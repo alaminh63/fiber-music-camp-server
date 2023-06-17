@@ -31,6 +31,7 @@ const verifyToken = (req, res, next) => {
 };
 console.log(process.env.USER_NAME);
 console.log(process.env.SECRET_PASSWORD);
+// mongodb server connect 
 const uri = `mongodb+srv://${process.env.USER_NAME}:${process.env.SECRET_PASSWORD}@cluster0.pdzlhd7.mongodb.net/?retryWrites=true&w=majority`;
 
 const client = new MongoClient(uri, {
