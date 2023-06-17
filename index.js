@@ -330,7 +330,7 @@ async function run() {
       res.send(result);
     });
 
-    // payments
+    // payments system code here
     app.post("/create-payment-intent", verifyToken, async (req, res) => {
       const { price } = req.body;
       const amount = parseInt(price * 100);
