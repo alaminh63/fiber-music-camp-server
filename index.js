@@ -127,7 +127,7 @@ async function run() {
       res.send(result);
     });
 
-    // instructors requests
+    // instructors requests section
     app.get("/instructors", async (req, res) => {
       const instructors = await instructorCollection.find().toArray();
       res.send(instructors);
@@ -137,7 +137,7 @@ async function run() {
       const instructors = await instructorCollection.find().limit(6).toArray();
       res.send(instructors);
     });
-    // classes requests 
+    // classes requests section here
     app.get("/classes", async (req, res) => {
       const classStatus = req.query.status;
       const filter = classStatus === "all" ? {} : { status: classStatus };
