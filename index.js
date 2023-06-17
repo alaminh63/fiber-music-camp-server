@@ -230,7 +230,7 @@ async function run() {
       }
     );
 
-    // update user role
+    // update user role section started here
 
     app.put(
       "/change-user-role/:id",
