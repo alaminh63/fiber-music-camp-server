@@ -82,7 +82,7 @@ async function run() {
       }
       next();
     };
-
+// jwt section
     app.post("/jwt", (req, res) => {
       const email = req.query.email;
       const token = jwt.sign(
