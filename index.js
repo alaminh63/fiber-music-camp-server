@@ -259,7 +259,7 @@ async function run() {
       res.send(result);
     });
 
-    // admin page req
+    // admin page req section here
     app.get("/users", verifyToken, verityAdmin, async (req, res) => {
       const result = await usersCollection.find().toArray();
       res.send(result);
