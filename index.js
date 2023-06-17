@@ -137,7 +137,7 @@ async function run() {
       const instructors = await instructorCollection.find().limit(6).toArray();
       res.send(instructors);
     });
-    // classes requests
+    // classes requests 
     app.get("/classes", async (req, res) => {
       const classStatus = req.query.status;
       const filter = classStatus === "all" ? {} : { status: classStatus };
@@ -203,7 +203,7 @@ async function run() {
       }
     );
 
-    // popular classes
+    // popular classes section started here
     app.get("/popular-classes", async (req, res) => {
       const result = await classesCollection
         .find({ status: "Approved" }, { sort: { student_enroll: -1 } })
