@@ -127,7 +127,7 @@ async function run() {
       res.send(result);
     });
 
-    // instructors requests section
+     // instructors requests section
     app.get("/instructors", async (req, res) => {
       const instructors = await instructorCollection.find().toArray();
       res.send(instructors);
